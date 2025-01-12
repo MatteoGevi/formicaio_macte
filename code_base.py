@@ -17,7 +17,9 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))  # Ensure your API key is p
 app = Flask(__name__, 
             template_folder='.',  # Where index.html and other templates are located
             static_folder='asset'  # Where CSS and JS files are located
+            static_url_path="/asset"
            )
+
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route("/")
