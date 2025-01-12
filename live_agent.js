@@ -342,7 +342,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 500);
     }
 
-    const backendURL = window.location.hostname === 'localhost' ? 'http://localhost:5052' : 'https://formicaio-99c83a293f10.herokuapp.com/';
+    const backendURL = window.location.hostname === 'localhost' ? 'http://localhost:5005' : 'https://formicaio-99c83a293f10.herokuapp.com/';
     
     async function sendMessageToBackend(message) {
         try {
