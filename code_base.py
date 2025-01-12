@@ -16,7 +16,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))  # Ensure your API key is p
 # Ensure Flask points to the right directories (for templates and static files like CSS)
 app = Flask(__name__, 
             template_folder='.',  # Where index.html and other templates are located
-            static_folder='asset'  # Where CSS and JS files are located
+            static_folder='asset',  # Where CSS and JS files are located
             static_url_path="/asset"
            )
 
