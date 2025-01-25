@@ -4,36 +4,35 @@ from flask_cors import CORS
 from openai import OpenAI
 from dotenv import load_dotenv
 
-
-app = ("ciao")
-
-# Initialize the OpenAI client
-
+# Load environment variables
 load_dotenv()
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))  # Ensure your API key is properly set
+# Initialize the OpenAI client
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-# Ensure Flask points to the right directories (for templates and static files like CSS)
+# Initialize Flask app
 app = Flask(__name__, 
             template_folder='.',  # Where index.html and other templates are located
-            static_folder='asset'  # Where CSS and JS files are located
+            static_folder='asset',  # Where CSS and JS files are located
+            static_url_path='/asset'  # URL prefix for static files
            )
 
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route("/")
 def index():
-    # Fix the reference to the template file
     return render_template("formicaio_webpage.html")
 
 @app.route("/ask", methods=["POST"])
 def ask():
     data = request.json
     user_input = data.get("message")
+    if not user_input:
+        return jsonify({"response": "Error: No message provided"}), 400
+
     try:
-        # Use the correct API method with `client.chat.completions.create`
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",  # Replace with gpt-4 if needed
+            model="gpt-3.5-turbo",
             messages=[
                 {"role": "system", "content": """
                  You don't have to explicitly refer to the fact that I provided you with documents to learn from.
@@ -53,11 +52,10 @@ def ask():
             ],
             max_tokens=150
         )
-        # Correct access of message content
         return jsonify({"response": response.choices[0].message.content.strip()})
     except Exception as e:
-        # Return the error as a response for debugging
-        return jsonify({"response": f"Error: {str(e)}"})
+        return jsonify({"response": f"Error: {str(e)}"}), 500
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=int(os.getenv("PORT", 5005)))
+    port = int(os.getenv("PORT", 5010))  # Default to 5005 for local development
+    app.run(debug=True, host="0.0.0.0", port=port)
