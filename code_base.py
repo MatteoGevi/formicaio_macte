@@ -57,5 +57,5 @@ def ask():
         return jsonify({"response": f"Error: {str(e)}"}), 500
 
 if __name__ == "__main__":
-    port = int(os.getenv("PORT", 5011))  # Default to 5005 for local development
+    port = int(os.getenv("PORT", 5014))
     app.run(debug=True, host="0.0.0.0", port=port)
