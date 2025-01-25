@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'MxPlusCordataPPC400';
-    src: url('WebPlus_Cordata_PPC-400.woff') format('woff'),
-         url('MxPlus_Cordata_PPC-400.ttf') format('truetype');
+    src: url('/asset/fonts/WebPlus_Cordata_PPC-400.woff') format('woff'),
+         url('/asset/fonts/MxPlus_Cordata_PPC-400.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -109,7 +109,6 @@ html, body {
     will-change: transform, background-color;
     transform: translateZ(0);
 }
-
 
 .start-btn:hover, .tutorial-btn:hover {
     background: #7ab37e;

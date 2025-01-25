@@ -362,11 +362,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 500);
     }
 
-    const backendURL = window.location.hostname === 'localhost' ? 'http://localhost:5010' : 'https://formicaio-99c83a293f10.herokuapp.com/';
+    const backendURL = window.location.hostname === 'localhost' ? 'http://localhost:5011' : 'https://formicaio-99c83a293f10.herokuapp.com/';
     
     async function sendMessageToBackend(message) {
         try {
-            const response = await fetch('http://localhost:5010/ask', {
+            const response = await fetch('http://localhost:5011/ask', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',  
