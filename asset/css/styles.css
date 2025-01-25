@@ -39,7 +39,7 @@ body {
     height: 100%;
     background: rgb(0,0,0);
     background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(20,20,16,1) 45%, rgba(40,40,40,1) 100%);
-    background-image: url('asset/css/png/new_bg.png');
+    background-image: url('/asset/css/png/new_bg.png');
     z-index: -1;
     opacity: 1;
     transition: opacity 1s ease-in-out;
