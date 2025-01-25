@@ -3,10 +3,13 @@ name = "formicaio-macte"
 version = "0.1.0"
 description = ""
 authors = ["Matteo Gevi <matteogevi97@gmail.com>"]
+packages = [
+    { include = "formicaio_macte" },  
+]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "3.11.4"
+python = "^3.11.4,<3.12"
 flask = "^3.0.3"
 openai = "^1.51.2"
 flask-cors = "^5.0.0"
