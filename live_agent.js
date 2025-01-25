@@ -32,13 +32,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Central image creation
     const centralImage = document.createElement('img');
-    centralImage.src = '/asset/css/png/formiche-fighe.svg';
+    centralImage.src = 'asset/css/png/formiche-fighe.svg'; // Updated path
     centralImage.className = 'formiche-dodge';
     document.body.appendChild(centralImage);
 
     // Audio setup
-    const menuAudio = new Audio('/asset/css/kinked_menu_fancy.mp3');
-    const gameAudio = new Audio('/asset/css/kinked_game_(FANCY).mp3');
+    const menuAudio = new Audio('asset/css/kinked_menu_fancy.mp3'); // Updated path
+    const gameAudio = new Audio('asset/css/kinked_game_(FANCY).mp3'); // Updated path
     let currentAudio = menuAudio;
     let isPlaying = false;
 
@@ -362,11 +362,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 500);
     }
 
-    const backendURL = window.location.hostname === 'localhost' ? 'http://localhost:5021' : 'https://formicaio-99c83a293f10.herokuapp.com/';
+    const backendURL = window.location.hostname === 'localhost' ? 'http://localhost:5030' : 'https://formicaio-99c83a293f10.herokuapp.com/';
     
     async function sendMessageToBackend(message) {
         try {
-            const response = await fetch('http://localhost:5021/ask', {
+            const response = await fetch('http://localhost:5030/ask', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',  
@@ -451,7 +451,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         imageBox.style.display = 'block';
                         dialogImage.classList.add('fade-out');
                         setTimeout(() => {
-                            dialogImage.src = '/asset/css/png/slide-dialogo0.png';
+                            dialogImage.src = 'asset/css/png/slide-dialogo0.png'; // Updated path
                             dialogImage.classList.remove('fade-out');
                             dialogImage.classList.add('fade-in');
                         }, 500);
@@ -462,7 +462,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (currentMessageIndex === 3) {
                         dialogImage.classList.add('fade-out');
                         setTimeout(() => {
-                            dialogImage.src = '/asset/css/png/slide-dialogo1.png';
+                            dialogImage.src = 'asset/css/png/slide-dialogo1.png'; // Updated path
                             dialogImage.classList.remove('fade-out');
                             dialogImage.classList.add('fade-in');
                         }, 500);
@@ -474,7 +474,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (currentMessageIndex === 7) {
                         dialogImage.classList.add('fade-out');
                         setTimeout(() => {
-                            dialogImage.src = '/asset/css/png/slide-dialogo2.png';
+                            dialogImage.src = 'asset/css/png/slide-dialogo2.png'; // Updated path
                             dialogImage.classList.remove('fade-out');
                             dialogImage.classList.add('fade-in');
                         }, 500);
@@ -486,7 +486,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (currentMessageIndex === 10) {
                         dialogImage.classList.add('fade-out');
                         setTimeout(() => {
-                            dialogImage.src = '/asset/css/png/slide-dialogo3.png';
+                            dialogImage.src = 'asset/css/png/slide-dialogo3.png'; // Updated path
                             dialogImage.classList.remove('fade-out');
                             dialogImage.classList.add('fade-in');
                         }, 500);
@@ -498,7 +498,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (currentMessageIndex === 12) {
                         dialogImage.classList.add('fade-out');
                         setTimeout(() => {
-                            dialogImage.src = '/asset/css/png/slide-dialogo4.png';
+                            dialogImage.src = 'asset/css/png/slide-dialogo4.png'; // Updated path
                             dialogImage.classList.remove('fade-out');
                             dialogImage.classList.add('fade-in');
                         }, 500);
@@ -510,7 +510,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (currentMessageIndex === 15) {
                         dialogImage.classList.add('fade-out');
                         setTimeout(() => {
-                            dialogImage.src = '/asset/css/png/slide-dialogo5.png';
+                            dialogImage.src = 'asset/css/png/slide-dialogo5.png'; // Updated path
                             dialogImage.classList.remove('fade-out');
                             dialogImage.classList.add('fade-in');
                         }, 500);
@@ -522,7 +522,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (currentMessageIndex === 18) {
                         dialogImage.classList.add('fade-out');
                         setTimeout(() => {
-                            dialogImage.src = '/asset/css/png/slide-dialogo6.png';
+                            dialogImage.src = 'asset/css/png/slide-dialogo6.png'; // Updated path
                             dialogImage.classList.remove('fade-out');
                             dialogImage.classList.add('fade-in');
                         }, 500);
