@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "formicaio-mcate"
+name = "formicaio-macte"
 version = "0.1.0"
 description = ""
 authors = ["Matteo Gevi <matteogevi97@gmail.com>"]
