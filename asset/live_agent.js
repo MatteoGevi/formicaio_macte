@@ -224,8 +224,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const messages = [
         "Bzz... Bzz..",
         "A whisper brushes against your ear,  as if it's flowing in from somewhere distant. ",
-        "Bzz... Bzz..",
-        "A whisper brushes against your ear,  as if it's flowing in from somewhere distant. ",
         "It's a murmur and a call all at once, making it hard to think straight.",
         "The sound twists, begins to take shape. And then, without warning, a voice speaks inside your head.",
         "\"I'm the Agent, the one they sent from Formicaio.\"",
@@ -450,8 +448,89 @@ document.addEventListener('DOMContentLoaded', function () {
                 setTimeout(() => {
                     if (chatBox) chatBox.classList.remove('shake');
 
-                    // (Any custom logic for updating images based on currentMessageIndex)
-                    // ...
+                    if (currentMessageIndex === 1) {
+                        imageBox.style.display = 'block';
+                        dialogImage.classList.add('fade-out');
+                        setTimeout(() => {
+                            dialogImage.src = 'asset/css/png/slide-dialogo0.png';
+                            dialogImage.classList.remove('fade-out');
+                            dialogImage.classList.add('fade-in');
+                        }, 500);
+                        setTimeout(() => {
+                            dialogImage.classList.remove('fade-in');
+                        }, 1000);
+                    }
+                    if (currentMessageIndex === 3) {
+                        dialogImage.classList.add('fade-out');
+                        setTimeout(() => {
+                            dialogImage.src = 'asset/css/png/slide-dialogo1.png';
+                            dialogImage.classList.remove('fade-out');
+                            dialogImage.classList.add('fade-in');
+                        }, 500);
+                        setTimeout(() => {
+                            dialogImage.classList.remove('fade-in');
+                        }, 1000);
+                    }
+
+                    if (currentMessageIndex === 7) {
+                        dialogImage.classList.add('fade-out');
+                        setTimeout(() => {
+                            dialogImage.src = 'asset/css/png/slide-dialogo2.png';
+                            dialogImage.classList.remove('fade-out');
+                            dialogImage.classList.add('fade-in');
+                        }, 500);
+                        setTimeout(() => {
+                            dialogImage.classList.remove('fade-in');
+                        }, 1000);
+                    }
+
+                    if (currentMessageIndex === 10) {
+                        dialogImage.classList.add('fade-out');
+                        setTimeout(() => {
+                            dialogImage.src = 'asset/css/png/slide-dialogo3.png';
+                            dialogImage.classList.remove('fade-out');
+                            dialogImage.classList.add('fade-in');
+                        }, 500);
+                        setTimeout(() => {
+                            dialogImage.classList.remove('fade-in');
+                        }, 1000);
+                    }
+
+                    if (currentMessageIndex === 12) {
+                        dialogImage.classList.add('fade-out');
+                        setTimeout(() => {
+                            dialogImage.src = 'asset/css/png/slide-dialogo4.png';
+                            dialogImage.classList.remove('fade-out');
+                            dialogImage.classList.add('fade-in');
+                        }, 500);
+                        setTimeout(() => {
+                            dialogImage.classList.remove('fade-in');
+                        }, 1000);
+                    }
+
+                    if (currentMessageIndex === 15) {
+                        dialogImage.classList.add('fade-out');
+                        setTimeout(() => {
+                            dialogImage.src = 'asset/css/png/slide-dialogo5.png';
+                            dialogImage.classList.remove('fade-out');
+                            dialogImage.classList.add('fade-in');
+                        }, 500);
+                        setTimeout(() => {
+                            dialogImage.classList.remove('fade-in');
+                        }, 1000);
+                    }
+
+                    if (currentMessageIndex === 18) {
+                        dialogImage.classList.add('fade-out');
+                        setTimeout(() => {
+                            dialogImage.src = 'asset/css/png/slide-dialogo6.png';
+                            dialogImage.classList.remove('fade-out');
+                            dialogImage.classList.add('fade-in');
+                        }, 500);
+                        setTimeout(() => {
+                            dialogImage.classList.remove('fade-in');
+                        }, 1000);
+                    }
                     
                     currentMessageIndex++;
                     isAnimating = false;
