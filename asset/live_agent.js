@@ -618,7 +618,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "<br><br>" +
         "You can share it at <a href=\"mailto:reincantamento@gmail.com\" style=\"color: #90D64B;\">reincantamento@gmail.com</a>." +
         "<br><br>" +
-        "This was only the first incursion from FORMICAIO. More emissaries are on the move.";
+        "This was only the first incursion from FORMICAIO. More emissaries are on the move. Keep following the agent on <a href=\"https://x.com/FORMICAIO_17\" style=\"color: #90D64B;\">X</a>";
         document.body.appendChild(finalMessageBox);
 
         requestAnimationFrame(() => {
