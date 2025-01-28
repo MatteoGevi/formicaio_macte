@@ -344,7 +344,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Use this URL based on the hostname:
     const backendURL = window.location.hostname === 'localhost'
-        ? 'http://localhost:5036'
+        ? 'http://localhost:5038'
         : 'https://formicaio-99c83a293f10.herokuapp.com';
 
     // Use `backendURL` here in the fetch call
